@@ -323,7 +323,7 @@ FadCard est un projet sous licence [MIT](https://opensource.org/licenses/MIT). V
 
 ---
 
-**Auteur :** Manus AI pour Greenfad
+**Auteur :** Fadcard pour Greenfad
 **Version :** 1.5
-**Date :** 02 Octobre 2025
+**Date :** 02 janvier 2025
 
