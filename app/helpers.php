@@ -145,9 +145,8 @@ if (!function_exists('getLogoUrl')) {
             $settings = Setting::all()->keyBy('key');
         }
 
-        $appLogo = $settings['app_logo'];
-
-        return $appLogo->logo_url;
+        // Utiliser le nouveau logo par défaut
+        return asset('images/logo.jpeg');
     }
 }
 

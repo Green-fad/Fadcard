@@ -7,9 +7,7 @@
     <!-- start hero section -->
     <section class="hero-section position-relative pb-60" @if (checkFrontLanguageSession() == 'ar') dir="rtl" @endif>
         <div class="container"> @include('flash::message') </div>
-        <div class="hero-bg-img text-end">
-            <img src="{{ asset('assets/img/new_home_page/hero-bg.png') }}" class="w-100 h-100" alt="hero-img" />
-        </div>
+        <div class="hero-bg-img text-end">            <img src="{{ asset(\'images/hero_card_gold.jpeg\') }}" class="w-100 h-100" alt="hero-img" />        </div>
         <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-lg-start text-center mb-lg-0 mb-md-5 mb-4">
@@ -32,7 +30,7 @@
                 </div>
                 <div class="col-lg-6 text-center mt-lg-0 mt-4">
                     <div class="hero-img mx-auto">
-                        <img src="{{ isset($setting['home_page_banner']) ? $setting['home_page_banner'] : asset('assets/img/new_front/hero-img.png') }}"
+                        <img src="{{ asset("images/hero_card_black.jpeg") }}"
                             alt="vCard" class="zoom-in-zoom-out w-100 h-auto" />
                     </div>
 
