@@ -15,7 +15,9 @@ return new class extends Migration
             return;
         }
         Setting::create([
+            'value' => '',
             'key' => 'register_enable',
+            'value' => '',
             'value' => '1',
         ]);
     }

@@ -13,10 +13,16 @@ return new class extends Migration
     public function up(): void
     {
         Setting::create([
+            'value' => '',
             'key' => 'paystack_key',
+            'value' => '',
+            'value' => '',
         ]);
         Setting::create([
+            'value' => '',
             'key' => 'paystack_secret',
+            'value' => '',
+            'value' => '',
         ]);
     }
 };

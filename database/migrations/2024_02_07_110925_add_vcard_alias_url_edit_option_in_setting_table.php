@@ -12,7 +12,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Setting::create(['key' => 'url_alias', 'value' => 1]);
+        Setting::create([
+            'value' => '','key' => 'url_alias',
+            'value' => '', 'value' => 1]);
     }
 
     /**

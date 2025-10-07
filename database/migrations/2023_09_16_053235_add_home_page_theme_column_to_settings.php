@@ -13,7 +13,9 @@ return new class extends Migration
     public function up(): void
     {
         Setting::create([
+            'value' => '',
             'key' => 'home_page_theme',
+            'value' => '',
             'value' => 2,
         ]);
     }

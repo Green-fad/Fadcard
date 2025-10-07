@@ -13,10 +13,14 @@ return new class extends Migration
     public function up(): void
     {
         Setting::create([
+            'value' => '',
             'key' => 'flutterwave_key',
+            'value' => '',
         ]);
         Setting::create([
+            'value' => '',
             'key' => 'flutterwave_secret',
+            'value' => '',
         ]);
     }
 };

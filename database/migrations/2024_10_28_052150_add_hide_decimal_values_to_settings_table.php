@@ -14,7 +14,9 @@ return new class extends Migration
     {
         Schema::table('settings', function (Blueprint $table) {
             Setting::create([
+            'value' => '',
                 'key' => 'hide_decimal_values',
+            'value' => '',
                 'value' => false,
             ]);
         });

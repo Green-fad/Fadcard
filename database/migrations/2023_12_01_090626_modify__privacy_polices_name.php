@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-    Schema::table('privacy_policies', function (Blueprint $table) {
-        $table->dropForeign(['vcard_id']);
-        $table->foreign('vcard_id')->references('id')->on('vcards')->onDelete('cascade');
-    });
+        // SQLite doesn't support dropping foreign keys, skip this migration for SQLite
+        if (config('database.default') !== 'sqlite') {
+            Schema::table('privacy_policies', function (Blueprint $table) {
+                $table->dropForeign(['vcard_id']);
+                $table->foreign('vcard_id')->references('id')->on('vcards')->onDelete('cascade');
+            });
+        }
     }
 
     /**

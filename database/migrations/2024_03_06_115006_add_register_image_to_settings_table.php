@@ -14,7 +14,9 @@ return new class extends Migration
     {
         $registerImage = ('assets/images/default-register.png');
 
-        Setting::create(['key' => 'register_image', 'value' => $registerImage]);
+        Setting::create([
+            'value' => '','key' => 'register_image',
+            'value' => '', 'value' => $registerImage]);
     }
 
     /**

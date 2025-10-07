@@ -12,7 +12,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Setting::create(['key' => 'datetime_method', 'value' => '1']);
+        Setting::create([
+            'value' => '','key' => 'datetime_method',
+            'value' => '', 'value' => '1']);
     }
 
     /**

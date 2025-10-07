@@ -29,7 +29,8 @@ return new class extends Migration
         foreach ($settings as $setting) {
             $settingExists = Setting::where('key', $setting)->exists();
             if (!$settingExists) {
-                Setting::create(['key' => $setting]);
+                Setting::create([
+            'value' => '','key' => $setting]);
             }
         }
     }

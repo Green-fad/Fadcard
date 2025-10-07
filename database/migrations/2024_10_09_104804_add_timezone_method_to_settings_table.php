@@ -12,7 +12,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Setting::create(['key' => 'timezone_method', 'value' => 'UTC']);
+        Setting::create([
+            'value' => '','key' => 'timezone_method',
+            'value' => '', 'value' => 'UTC']);
     }
 
     /**

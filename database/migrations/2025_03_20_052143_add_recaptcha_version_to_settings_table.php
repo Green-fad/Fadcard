@@ -18,7 +18,9 @@ return new class extends Migration
                 return;
             }
             Setting::create([
+            'value' => '',
                 'key' => 'recaptcha_version',
+            'value' => '',
                 'value' => '1',
             ]);
         });

@@ -17,7 +17,9 @@ return new class extends Migration
             return;
         }
         Setting::create([
+            'value' => '',
             'key' => 'user_verified_email',
+            'value' => '',
             'value' => '1',
         ]);
     }

@@ -14,7 +14,9 @@ return new class extends Migration
     {
         $appLogoUrl = ('assets/images/infyom-logo60x60.png');
 
-        Setting::create(['key' => 'dashboard_logo', 'value' => $appLogoUrl]);
+        Setting::create([
+            'value' => '','key' => 'dashboard_logo',
+            'value' => '', 'value' => $appLogoUrl]);
     }
 
     /**

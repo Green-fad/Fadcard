@@ -36,4 +36,4 @@ class PasswordResetLinkController extends Controller
 
         return response()->json(['status' => __($status)]);
     }
-}f
+}

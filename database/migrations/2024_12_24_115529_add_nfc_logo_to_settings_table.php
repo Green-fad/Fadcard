@@ -15,7 +15,9 @@ return new class extends Migration
         Schema::table('settings', function (Blueprint $table) {
             Schema::table('settings', function (Blueprint $table) {
                 Setting::create([
+            'value' => '',
                     'key' => 'nfc_logo_required',
+            'value' => '',
                     'value' => true,
                 ]);
             });

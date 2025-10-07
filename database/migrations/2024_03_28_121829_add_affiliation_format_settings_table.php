@@ -17,7 +17,9 @@ return new class extends Migration
             return;
         }
         Setting::create([
+            'value' => '',
             'key' => 'affiliation_amount_type',
+            'value' => '',
             'value' => '1',
         ]);
     }

@@ -14,7 +14,9 @@ return new class extends Migration
     {
         Schema::table('settings', function (Blueprint $table) {
             Setting::create([
+            'value' => '',
                 'key' => 'mobile_validation',
+            'value' => '',
                 'value' => false,
             ]);
         });

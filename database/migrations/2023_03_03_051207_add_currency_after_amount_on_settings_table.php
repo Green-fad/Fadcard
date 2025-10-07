@@ -15,7 +15,9 @@ return new class extends Migration
             return;
         }
         Setting::create([
+            'value' => '',
             'key' => 'currency_after_amount',
+            'value' => '',
             'value' => '0',
         ]);
     }
