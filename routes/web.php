@@ -115,8 +115,8 @@ Route::middleware(['freshInstall'])->group(function () {
     });
 
     Route::get('/', function () {
-        return (!Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
-    })->middleware('checkCustomDomain');
+        return (!Auth::check()) ? \redirect(route('login')) : Redirect::to('/dashboard');
+    });
 
     //social logins
     Route::get('/login/{provider}', [SocialAuthController::class, 'redirectToSocial'])->name('social.login');
@@ -125,7 +125,7 @@ Route::middleware(['freshInstall'])->group(function () {
     Route::middleware('setLanguage')->group(function () {
         Route::get('/check-url-alias-available/{urlAlias}', [VcardController::class, 'checkUniqueUrlAlias'])->name('vcards.check-url-alias-available');
         Route::post('/change-language', [HomeController::class, 'changeLanguage']);
-        Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('checkCustomDomain');
+        Route::get('/home', [HomeController::class, 'index'])->name('home');
         Route::get('cookie', [HomeController::class, 'declineCookie'])->name('declineCookie');
         Route::get('terms-conditions', [HomeController::class, 'termCondition'])->name('terms.conditions');
         Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy.policy');
@@ -1139,4 +1139,9 @@ Route::middleware(['freshInstall'])->group(function () {
             ->png();
     });
     Route::get('update-steps/{steps?}', [UserController::class, 'updateSteps'])->name('update-steps');
+});
+
+// Route de test simple
+Route::get('/test', function () {
+    return 'FadCard fonctionne correctement!';
 });
